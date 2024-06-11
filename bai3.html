@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Định nghĩa lớp Student
+        function Student(name, age, scores) {
+            this.name = name;
+            this.age = age;
+            this.scores = scores;
+    
+            // Phương thức để thay đổi tên học sinh
+            this.changeName = function(newName) {
+                this.name = newName;
+            }
+    
+            // Phương thức để thay đổi tuổi học sinh
+            this.changeAge = function(newAge) {
+                this.age = newAge;
+            }
+    
+            // Phương thức để thay đổi điểm số của học sinh
+            this.changeScores = function(newScores) {
+                this.scores = newScores;
+            }
+    
+            // Phương thức để hiển thị thông tin của học sinh
+            this.showAll = function() {
+                console.log("Name:", this.name);
+                console.log("Age:", this.age);
+                console.log("Scores:", this.scores);
+            }
+    
+            // Phương thức để tính điểm trung bình của học sinh
+            this.DiemTB = function() {
+                if (this.scores.length === 0) {
+                    return 0;
+                }
+                let total = 0;
+                for (let i = 0; i < this.scores.length; i++) {
+                    total += this.scores[i];
+                }
+                return total / this.scores.length;
+            }
+        }
+    
+        // Tạo đối tượng học sinh
+        let student1 = new Student("Đỗ Chính Đạt", 23, [8, 9, 9,5,4,7]);
+        let student2 = new Student("Nghuyễn Thảo Nguyên", 22, [7, 8, 8,6,7,4]);
+    
+        // Hiển thị thông tin của học sinh
+        student1.showAll();
+        student2.showAll();
+    
+        // Tính điểm trung bình của học sinh
+        let averageScore1 = student1.DiemTB();
+        let averageScore2 = student2.DiemTB();
+    
+        // So sánh và hiển thị sinh viên có điểm trung bình cao hơn
+        if (averageScore1 > averageScore2) {
+            console.log(student1.name + " là người có điểm trung bình cao hơn. ");
+            console.log("Average Score:", averageScore1);
+        } else if (averageScore1 < averageScore2) {
+            console.log(student2.name + " là người có điểm trung bình cao hơn.");
+            console.log("Average Score:", averageScore2);
+        } else {
+            console.log("Điểm trung bình của 2 người bằng nhau.");
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>

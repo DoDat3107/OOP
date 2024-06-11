@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Thông tin của hình chữ nhật</h1>
+    <script>
+        
+        class Rectangle {
+            ChieuDai;
+            ChieuRong;
+            S;
+            V;
+            constructor(ChieuDaiinput,ChieuRonginput){
+                this.ChieuDai=ChieuDaiinput;
+                this.ChieuRong=ChieuRonginput;
+                this.S=ChieuDaiinput*ChieuRonginput;
+                this.V=2*ChieuDaiinput*ChieuRonginput;
+
+            }
+        }
+
+            let HCN = new Rectangle(12,20);
+            document.write("Chiều dài là " + HCN.ChieuDai +"<br/>") 
+            document.write("Chiều rộng là " + HCN.ChieuRong+"<br/>")
+            document.write("Diện tích = " + HCN.S+"<br/>")
+            document.write("Chu vi = " + HCN.V)
+    </script>
+</body>
+</html>

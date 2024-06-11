@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Temperature {
+            doC;
+            DoF;
+            Kenvin;
+            constructor(doCinput) {
+
+                if (doCinput < -273) {
+                    document.write("Nhiệt độ nhập vào ko được dưới -273 độ C")
+                    return doC
+                }
+                else {
+                    this.doC = doCinput;
+                    this.doF = (doCinput * 9 / 5) + 32;
+                    this.Kenvin = doCinput + 273.15;
+                }
+            }
+        }
+        let C = new Temperature(25)
+        document.write("Độ F = " + C.doF + "<br/>");
+        document.write("Độ kenvin = " + C.Kenvin + "<br/>");
+    </script>
+</body>
+
+</html>
